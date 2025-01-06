@@ -12,6 +12,50 @@ This dataset contains:
 - 314,726 rows of athlete to result data which includes both team sports and individual sports.
 - 235 distinct countries (some existing from the past)
 
+## File Structure
+The src folder contains the core Java files that implement the functionality of the project. Below is an overview of each file:
+
+### `OlympicAnalyzer.java`
+- Purpose: Acts as the main class to analyze Olympic data.
+- Key Responsibilities:
+Load and process data about athletes, events, and results.
+Provide methods for querying the analyzed data.
+
+### `OlympicAnalyzerInterface.java`
+- Purpose: Defines the contract/interface for Olympic data analysis.
+- Key Responsibilities:
+  Declares methods that must be implemented by OlympicAnalyzer.java.
+  Ensures consistent structure for data analysis operations.
+
+### `Person.java`
+- Purpose: Represents an individual (athlete or participant) in the Olympic data model loaded from `Athlete.csv`.
+- Key Responsibilities:
+  Store personal details such as name, age, gender, height, weight, country, etc.
+
+### `Result.java`
+- Purpose: Encapsulates the result of a specific Olympic event.
+- Key Responsibilities:
+Store details such as event name, year, editionId, etc.
+Provide methods to retrieve and manipulate result data.
+
+### `OlympicResult.java`
+- Purpose: Encapsulates the result of a specific Olympic event.
+- Key Responsibilities:
+  Store details such as event name, year, editionId, isTeam, etc.
+  Provide methods to retrieve and manipulate result data.
+
+### `OlympicGame.java`
+- Purpose: Represents an Olympic game (e.g., Tokyo 2020).
+- Key Responsibilities:
+  Store game-specific data such as year and editionId.
+
+### `LocalTest.java`
+- Purpose: Serves as a test correctness for validating the result and functionality of the methods.
+- Key Responsibilities:
+  Test individual methods and features from OlympicAnalyzer.java and related classes.
+  Ensure data processing and logic return expected results.
+  Provide sample inputs and verify outputs for core functionalities.
+
 ## Data Analysis
 The analysis will be implemented in the methods in the
 `OlympicsAnalyzer` class. Method details are described below.
@@ -19,11 +63,10 @@ The analysis will be implemented in the methods in the
 ### 1. Top 10 Performant Female Athletes in Individual Sport
     `
     public Map<String, Integer> topPerformantFemale()
-    `
     
 This method returns `<name, count>` map of size 10, where:
-    - the key is the name of female athlete.
-    - the value is the total gold medals acquired by that female athlete in individual sport (i.e. not in team sport).
+- the key is the name of female athlete.
+- the value is the total gold medals acquired by that female athlete in individual sport (i.e. not in team sport).
 
 The map is sorted descending order. If two athletes have the same gold medal count, then they are sorted by the alphabetical order by the name.
 

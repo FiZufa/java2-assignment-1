@@ -394,7 +394,7 @@ public class OlympicsAnalyzer implements OlympicsAnalyzerInterface {
     @Override
     public Map<String, Integer> topCountryWithYoungAthletes() {
         Map<String, List<Integer>> countyAgesMap = new HashMap<>();
-        Set<Integer> processedAthleteIds = new HashSet<>(); // Set to track processed athlete IDs
+        Set<Integer> processedAthleteIds = new HashSet<>();
 
         for (OlympicResult result : olympicResultList) {
             if (result.getEditionId() == 61) { // Check for 2020 Olympics
