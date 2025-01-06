@@ -15,41 +15,41 @@ This dataset contains:
 ## File Structure
 The src folder contains the core Java files that implement the functionality of the project. Below is an overview of each file:
 
-### `OlympicAnalyzer.java`
+1.  `OlympicAnalyzer.java`
 - Purpose: Acts as the main class to analyze Olympic data.
 - Key Responsibilities:
 Load and process data about athletes, events, and results.
 Provide methods for querying the analyzed data.
 
-### `OlympicAnalyzerInterface.java`
+2.  `OlympicAnalyzerInterface.java`
 - Purpose: Defines the contract/interface for Olympic data analysis.
 - Key Responsibilities:
   Declares methods that must be implemented by OlympicAnalyzer.java.
   Ensures consistent structure for data analysis operations.
 
-### `Person.java`
+3. `Person.java`
 - Purpose: Represents an individual (athlete or participant) in the Olympic data model loaded from `Athlete.csv`.
 - Key Responsibilities:
   Store personal details such as name, age, gender, height, weight, country, etc.
 
-### `Result.java`
+4. `Result.java`
 - Purpose: Encapsulates the result of a specific Olympic event.
 - Key Responsibilities:
 Store details such as event name, year, editionId, etc.
 Provide methods to retrieve and manipulate result data.
 
-### `OlympicResult.java`
+5. `OlympicResult.java`
 - Purpose: Encapsulates the result of a specific Olympic event.
 - Key Responsibilities:
   Store details such as event name, year, editionId, isTeam, etc.
   Provide methods to retrieve and manipulate result data.
 
-### `OlympicGame.java`
+6. `OlympicGame.java`
 - Purpose: Represents an Olympic game (e.g., Tokyo 2020).
 - Key Responsibilities:
   Store game-specific data such as year and editionId.
 
-### `LocalTest.java`
+7. `LocalTest.java`
 - Purpose: Serves as a test correctness for validating the result and functionality of the methods.
 - Key Responsibilities:
   Test individual methods and features from OlympicAnalyzer.java and related classes.
